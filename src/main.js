@@ -20,6 +20,7 @@ console.log(result)
 const app = document.getElementById('app')
 app.innerHTML = result*/
 
+/*
 import {produce} from 'immer'
 
 let book = {title: 'harry potter', published: false}
@@ -33,4 +34,19 @@ function publish(book) {
 
 console.log('book', book)
 const updatedBook = publish(book)
-console.log('updatedBook', updatedBook)
+console.log('updatedBook', updatedBook)*/
+
+import store from "./store/Store.js"
+import {addBug, removeBug, resolveBug} from "./store/Actions.js"
+
+console.log('initial log ',store.getState())
+store.subscribe(()=>{
+    console.log('subscribe ', store.getState())})
+store.dispatch(addBug('ddd'))
+store.dispatch(addBug('ddd'))
+store.dispatch(addBug('ddd'))
+store.dispatch(addBug('ddd'))
+store.dispatch(resolveBug(3))
+store.dispatch(removeBug(4))
+
+
