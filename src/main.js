@@ -43,9 +43,9 @@ console.log('initial log ',store.getState())
 store.subscribe(()=>{
     console.log('subscribe ', store.getState())})
 store.dispatch(addBug('ddd'))
-store.dispatch(addBug('ddd'))
-store.dispatch(addBug('ddd'))
-store.dispatch(addBug('ddd'))
+store.dispatch(addBug('saasdsa'))
+store.dispatch(addBug('ss'))
+store.dispatch(addBug('1223'))
 store.dispatch(resolveBug(3))
 store.dispatch(removeBug(4))
 
